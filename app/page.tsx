@@ -49,7 +49,8 @@ export default function HomePage() {
                   alt="Joker Portrait"
                   width={400}
                   height={500}
-                  className={`w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700 ${
+                  className={`w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700 drop-shadow-sm
+                  hover:drop-shadow-xl ${
                     imageLoaded ? "scale-100 opacity-100" : "scale-105 opacity-0"
                   }`}
                   onLoad={() => setImageLoaded(true)}
@@ -60,12 +61,12 @@ export default function HomePage() {
                 right-4 flex items-center
                 space-x-2 animate-in
                 slide-in-from-right duration-800
-                delay-500 opacity-25
-                backdrop-blur-lg rounded-full">
+                delay-500
+                 rounded-full">
                   <div className="w-2 h-2 bg-black rounded-full animate-pulse"></div>
                   <span className="text-xs
                   sm:text-sm font-medium
-                  bg-white px-2 py-1 rounded
+                  bg-white/30 backdrop-blur-lg px-2 py-1 rounded
                   shadow-sm hover:shadow-md
                   transition-shadow duration-300">
                     Intelligence
@@ -161,7 +162,12 @@ export default function HomePage() {
                   alt="Joker Portrait"
                   width={400}
                   height={500}
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                  className="object-cover
+                  grayscale
+                  hover:grayscale-0 transition-all
+                  duration-700 hover:scale-105
+                  drop-shadow-sm
+                  hover:drop-shadow-xl"
                   onLoad={() => setImageLoaded(true)}
                 />
 
@@ -169,11 +175,11 @@ export default function HomePage() {
                 <div className="absolute top-16 right-8 flex items-center space-x-2 animate-in slide-in-from-right duration-800 delay-500 hover:scale-110 transition-transform duration-300">
                   <div className="w-2 h-2 bg-black rounded-full animate-pulse"></div>
                   <span className="text-sm
-                  font-medium bg-white px-2 py-1
+                  font-medium bg-white/30 px-2 py-1
                   rounded shadow-sm
                   hover:shadow-md
                   transition-shadow duration-300
-                  opacity-25 backdrop-blur-lg
+                  backdrop-blur-lg
                   border-2 border-gray-600/60">
                     Intelligence
                   </span>
@@ -182,7 +188,11 @@ export default function HomePage() {
                 {/* Complete Unpredictability Label */}
                 <div className="absolute bottom-32 right-4 flex items-center space-x-2 animate-in slide-in-from-right duration-800 delay-700 hover:scale-110 transition-transform duration-300">
                   <div className="w-2 h-2 bg-black rounded-full animate-pulse"></div>
-                  <div className="bg-white px-2 py-1 rounded shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="bg-white/30
+                  backdrop-blur-lg px-2 py-1
+                  rounded shadow-sm
+                  hover:shadow-md
+                  transition-shadow duration-300">
                     <div className="text-sm font-medium">Complete</div>
                     <div className="text-sm font-medium">Unpredictability</div>
                   </div>
@@ -191,7 +201,10 @@ export default function HomePage() {
             </div>
 
             {/* Right Side - Pagination */}
-            <div className="flex-1 flex flex-col items-end justify-between h-96 animate-in slide-in-from-right duration-1000 delay-400">
+            <div className="flex-1 flex flex-col
+            items-end justify-evenly h-96 animate-in
+            slide-in-from-right duration-1000
+            delay-400">
               <div className="flex flex-col space-y-6 text-right">
                 {[0, 1, 2, 3, 4].map((index) => (
                   <div
