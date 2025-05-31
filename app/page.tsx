@@ -66,7 +66,7 @@ export default function HomePage() {
                   <div className="w-2 h-2 bg-black rounded-full animate-pulse"></div>
                   <span className="text-xs
                   sm:text-sm font-medium
-                  bg-white/30 backdrop-blur-lg px-2 py-1 rounded
+                  bg-white/50 backdrop-blur-lg px-2 py-1 rounded
                   shadow-sm hover:shadow-md
                   transition-shadow duration-300">
                     Intelligence
@@ -167,7 +167,8 @@ export default function HomePage() {
                   hover:grayscale-0 transition-all
                   duration-700 hover:scale-105
                   drop-shadow-sm
-                  hover:drop-shadow-xl"
+                  hover:drop-shadow-xl h-full
+                  w-auto"
                   onLoad={() => setImageLoaded(true)}
                 />
 
@@ -175,12 +176,12 @@ export default function HomePage() {
                 <div className="absolute top-16 right-8 flex items-center space-x-2 animate-in slide-in-from-right duration-800 delay-500 hover:scale-110 transition-transform duration-300">
                   <div className="w-2 h-2 bg-black rounded-full animate-pulse"></div>
                   <span className="text-sm
-                  font-medium bg-white/30 px-2 py-1
+                  font-medium bg-white/50 px-2 py-1
                   rounded shadow-sm
                   hover:shadow-md
                   transition-shadow duration-300
                   backdrop-blur-lg
-                  border-2 border-gray-600/60">
+                  ">
                     Intelligence
                   </span>
                 </div>
@@ -188,7 +189,7 @@ export default function HomePage() {
                 {/* Complete Unpredictability Label */}
                 <div className="absolute bottom-32 right-4 flex items-center space-x-2 animate-in slide-in-from-right duration-800 delay-700 hover:scale-110 transition-transform duration-300">
                   <div className="w-2 h-2 bg-black rounded-full animate-pulse"></div>
-                  <div className="bg-white/30
+                  <div className="bg-white/50
                   backdrop-blur-lg px-2 py-1
                   rounded shadow-sm
                   hover:shadow-md
